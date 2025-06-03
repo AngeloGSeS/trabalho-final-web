@@ -6,5 +6,5 @@ Trabalho final da disciplina de WEB
 Ângelo Gabriel Souza e Silva https://github.com/AngeloGSeS
 Cristiane Martins Silva https://github.com/CMSILVA4
 Lucas Afonso Martins Santos https://github.com/Afonso-Lucass
-Maria Clara Veríssimo Ferreira Araújo 
+Maria Clara Veríssimo Ferreira Araújo HTTPS://github.com/
 Matheus Ruhan Costa https://github.com/matheusruhancosta
