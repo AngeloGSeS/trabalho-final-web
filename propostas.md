@@ -23,7 +23,7 @@ Falta de informação basica sobre alguns empregos que muitas pessoas desejam po
 ### Público alvo
 Recem formados em busca de entrar no mercado de trabalho.
 ### Funcionalidades
-Informa informaçoes sobre empregos como sálario medio, horas de trabalho, vales, empregabilidade.
+Informa sobre empregos como sálario medio, horas de trabalho, vales, empregabilidade.
 ---
 
 # Proposta 03
