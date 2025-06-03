@@ -1,15 +1,15 @@
 # Proposta 01
-
+Checklist de tarefas.
 ## Título_da_proposta
-Checklist de tarefas
+Checkday
 ### Descrição
-Feito para pessoas que precisão se organizar
+Feito para pessoas que precisão se organizar dependendo do horario de trabalho/estudos
 ### Problema a ser solucionado
-Falta de organização 
+Falta de organização.
 ### Público alvo
-Adolecentes/adulto com falta de tempo
+Adolecentes/adulto com falta de tempo.
 ### Funcionalidades
-Se organizar melhor para conseguir mais tempo livre 
+Se organizar melhor para conseguir mais tempo livre no dia a dia.
 ---
 
 # Proposta 02
