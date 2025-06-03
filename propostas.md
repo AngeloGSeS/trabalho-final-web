@@ -11,7 +11,8 @@ Adolecentes/adulto com falta de tempo.
 ### Funcionalidades
 1. Realizar um questionario para indentificar a rotina do usuario.
 2. Criação e exibição de um cronograma personalizado de tarefas.
-3. Cadastro e login do usuario.
+3. Criar opções para o usuario preencher quando realizar a atividade proposta.
+4. Cadastro e login do usuario.
 ---
 
 # Proposta 02
