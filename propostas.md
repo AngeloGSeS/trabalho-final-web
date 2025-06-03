@@ -1,15 +1,15 @@
 # Proposta 01
 
 ## Título_da_proposta
-ajgjhag
+Checklist de tarefas
 ### Descrição
-
+Feito para pessoas que precisão se organizar
 ### Problema a ser solucionado
-
+Falta de organização 
 ### Público alvo
-
+Adolecentes/adulto com falta de tempo
 ### Funcionalidades
-
+Se organizar melhor para conseguir mais tempo livre 
 ---
 
 # Proposta 02
