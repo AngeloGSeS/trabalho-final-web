@@ -1,4 +1,4 @@
-# Proposta 01
+# Proposta 01 RECUSADA
 Checklist de tarefas.
 ## Título_da_proposta
 Checkday.
@@ -15,7 +15,7 @@ Adolecentes/adulto com falta de tempo.
 4. Cadastro e login do usuario.
 ---
 
-# Proposta 02
+# Proposta 02 RECUSADA
 Teste vocacional.
 ## Título_da_proposta
 Encontre seu trabalho.
@@ -32,7 +32,7 @@ Recem formados em busca de entrar no mercado de trabalho.
 4. Exibição de sugestões de trabalhos.
 ---
 
-# Proposta 03
+# Proposta 03 ESCOLHIDA
 Loja virtual para a loja BTEX.
 ## Título_da_proposta
 BTEX-Loja virtual.
