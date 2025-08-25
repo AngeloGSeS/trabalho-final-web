@@ -1,6 +1,4 @@
-# trabalho-final-web
-Trabalho final da disciplina de WEB
-### Integrantes
+# Integrantes
 Ângelo Gabriel Souza e Silva https://github.com/AngeloGSeS
 Cristiane Martins Silva https://github.com/CMSILVA4
 Lucas Afonso Martins Santos https://github.com/Afonso-Lucass
@@ -9,4 +7,15 @@ Matheus Ruhan Costa https://github.com/matheusruhancosta
 # Título
 Btex
 # Descrição 
-
+Representação da loja física digitalmente, conectando os públicos, com o mostruário dos produtos disponivéis.
+# Principais Funcionalidades 
+1. Mostruário de produtos, com filtros especificando categorias, e exibindo caracteristicas dos produtos, como preço e variaçoes dos produtos.
+2. Login do administrador.
+3. Interação direcionando as redes sociais, whatsapp e instagram.
+4. Sistema para busca de produtos.
+5. Exibição de informações básicas sobre a loja, como historia e localização.
+6. Exibição de banner com fotos cadastradas.
+7. Cadastro e alteração de produtos pelo administrador.
+8. Alteração de banner rotativo.
+# Link de compartilhamento do Figma
+https://www.figma.com/design/VXXXR5oI063S9JuqJc76V8/Wireframes--Projeto-Final?node-id=0-1&t=klK4uGrNUjBkS28R-1
