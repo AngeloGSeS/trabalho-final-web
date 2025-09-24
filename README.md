@@ -21,4 +21,4 @@ Representação da loja física digitalmente, conectando os públicos, com o mos
 https://www.figma.com/design/VXXXR5oI063S9JuqJc76V8/Wireframes--Projeto-Final?node-id=0-1&t=klK4uGrNUjBkS28R-1
 
 
-3333333333333333333333333333
+
