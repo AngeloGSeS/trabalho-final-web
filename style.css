@@ -506,29 +506,17 @@ footer {
 }
 
 .btn-edit:hover {
-<<<<<<< HEAD:Projeto Final/frontend/style.css
     background-color: #ffffff;
-=======
-    background-color: #ece9e9;
->>>>>>> temp-branch:style.css
     transform: scale(1.05);
 }
 
 .btn-delete {
-<<<<<<< HEAD:Projeto Final/frontend/style.css
     background-color: #8b0000;
-=======
-    background-color: #ff0000;
->>>>>>> temp-branch:style.css
     color: white;
 }
 
 .btn-delete:hover {
-<<<<<<< HEAD:Projeto Final/frontend/style.css
     background-color: #8b0000;
-=======
-    background-color: #ff0000;
->>>>>>> temp-branch:style.css
     transform: scale(1.05);
 }
 
@@ -621,10 +609,6 @@ footer {
     transform: scale(1.05);
 }
 
-<<<<<<< HEAD:Projeto Final/frontend/style.css
-=======
-/* Responsivo */
->>>>>>> temp-branch:style.css
 @media (max-width: 600px) {
     .form-actions {
         text-align: center;
@@ -634,11 +618,8 @@ footer {
     }
 }
 
-<<<<<<< HEAD:Projeto Final/frontend/style.css
 /*Página de alterar Banner */
 
-=======
->>>>>>> temp-branch:style.css
 .banner-section {
   text-align: center;
   margin: 20px 0;
