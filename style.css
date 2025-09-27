@@ -715,3 +715,52 @@ footer {
 .btn-login:hover {
   background: #9e9e9e;
 }
+
+/*Página de alterar produto*/
+
+.alterar-produto-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.alterar-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px 40px;
+  align-items: center;
+}
+
+.alterar-form label {
+  font-weight: bold;
+}
+
+.alterar-form input[type="text"],
+.alterar-form input[type="file"] {
+  padding: 10px;
+  background: #d3d3d3;
+  border: none;
+  width: 100%;
+}
+
+.upload-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-save {
+  grid-column: 2;
+  justify-self: end;
+  padding: 8px 15px;
+  background: #bdbdbd;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-save:hover {
+  background: #9e9e9e;
+}
