@@ -27,3 +27,6 @@ A entidade "Produto" se refere aos produtos que seram exibidos no site, e ela po
 A entidade "Administrador" a pessoa que gerencia o sistema e cadastra as informações, que possui os atributos "id_admin" um código único para o id do administrador, "usuario" e "senha" email do administrador e sua senha. Que se relaciona com a entidade "BannerRotativo" com o relacionamento "cadastra" em que BannerRotativo é cadastrado por exatamente um Administrador (1,1) e um Administrador pode cadastrar um ou muitos Banners (1,n).
 
 A entidade "BannerRotativo" são os slides de propaganda que aparecem no site e guarda um código único "id_banner" e as imagens do banner "imagem".
+
+# Modelo Lógico 
+![Modelo Logico](db/ModeloLogico.png)
