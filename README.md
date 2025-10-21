@@ -30,3 +30,7 @@ A entidade "BannerRotativo" são os slides de propaganda que aparecem no site e 
 
 # Modelo Lógico 
 ![Modelo Logico](db/ModeloLogico.png)
+
+# Modelo Fisíco
+![Modelo Fisico](db/DDL.sql)
+![Modelo Fisico](db/DML.sql)
