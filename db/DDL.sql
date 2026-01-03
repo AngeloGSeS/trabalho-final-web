@@ -1,7 +1,7 @@
 CREATE TABLE Administrador (
     id_admin SERIAL PRIMARY KEY,
     usuario VARCHAR(50) UNIQUE NOT NULL,
-    senha VARCHAR(50) NOT NULL
+    senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Produto (
@@ -10,7 +10,7 @@ CREATE TABLE Produto (
     categoria VARCHAR(50),
     descricao TEXT,
     preco DECIMAL(10, 2) NOT NULL,
-    imagem BYTEA,
+    imagem TEXT, -- URL da imagem
     cores VARCHAR(255),
     id_admin INT NOT NULL,
 
@@ -23,7 +23,7 @@ CREATE TABLE Produto (
 
 CREATE TABLE BannerRotativo (
     id_banner INT PRIMARY KEY,
-    imagens BYTEA[] NOT NULL,
+    imagens TEXT[] NOT NULL, -- URLs das imagens
     id_admin INT NOT NULL,
 
     CONSTRAINT fk_admin_banner
