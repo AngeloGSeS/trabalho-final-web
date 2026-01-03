@@ -10,39 +10,60 @@
 <body>
     <header>
         <div class="header-top">
-        <a href="index.html" class="logo-link">
-            <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
-        </a>       <nav>
-            <ul>
-                <li><a href="index.html" class="nav-item">Início</a></li>
-                <li><a href="historia.html" class="nav-item">História</a></li>
-                <li><a href="tecidos.html" class="nav-item active">Tecido</a></li> 
-                <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
-                <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
-            </ul>
-        </nav>
+            <a href="index.html" class="logo-link">
+                <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-item">Início</a></li>
+                    <li><a href="historia.html" class="nav-item">História</a></li>
+                    <li><a href="tecidos.html" class="nav-item">Tecido</a></li> 
+                    <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
+                    <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
+                </ul>
+            </nav>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar...">
                 <i class="fas fa-search"></i>
             </div>
         </div>
- 
     </header>
 
     <main class="product-detail-page">
-        <h2>SOBRE O PRODUTO</h2>
-        <div class="product-container">
-            <div class="product-image">PRODUTO</div>
-            <div class="product-info">
-                <h3>Nome do Produto de Tecido</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Descrição detalhada do produto, incluindo informações sobre o material, uso e características.</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p class="price">Preço: R$ 59,90/metro</p>
-                <div class="colors">
-                    <span>Cores:</span>
-                    <div class="color-box" style="background-color: #d8d8d8;"></div> <div class="color-box" style="background-color: #a0a0a0;"></div> <div class="color-box" style="background-color: #606060;"></div> </div>
+        <!-- Loading -->
+        <div id="loading" style="text-align: center; padding: 40px;">
+            <p>Carregando produto...</p>
+        </div>
+
+        <!-- Conteúdo do produto (será preenchido) -->
+        <div id="product-content" style="display: none;">
+            <h2>SOBRE O PRODUTO</h2>
+            <div class="product-container">
+                <div class="product-image" id="product-image">
+                    <!-- Imagem será inserida aqui -->
+                </div>
+                <div class="product-info">
+                    <h3 id="product-name">Nome do Produto</h3>
+                    <p id="product-description">Descrição do produto...</p>
+                    <p class="price" id="product-price">Preço: R$ 0,00</p>
+                    <div class="colors" id="product-colors">
+                        <!-- Cores serão inseridas aqui -->
+                    </div>
+                    <div class="product-category">
+                        <strong>Categoria:</strong> <span id="product-category"></span>
+                    </div>
+                </div>
             </div>
+            
+            <div class="back-button">
+                <a href="cama,mesa e banho.html" class="btn-back">← Voltar para produtos</a>
+            </div>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div id="product-error" style="display: none; text-align: center; padding: 40px;">
+            <p style="color: red;">Produto não encontrado.</p>
+            <a href="cama,mesa e banho.html" class="btn-back">← Voltar para produtos</a>
         </div>
     </main>
 
@@ -57,6 +78,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/produto-detalhe.js"></script>
 </body>
 </html>

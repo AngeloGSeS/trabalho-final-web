@@ -11,36 +11,38 @@
     <header>
         <div class="header-top">
             <a href="index.html" class="logo-link">
-            <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
-</a>        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-item">Início</a></li>
-                <li><a href="historia.html" class="nav-item">História</a></li>
-                <li><a href="tecidos.html" class="nav-item active">Tecido</a></li>
-                <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
-                <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
-            </ul>
-        </nav>
+                <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-item">Início</a></li>
+                    <li><a href="historia.html" class="nav-item">História</a></li>
+                    <li><a href="tecidos.html" class="nav-item active">Tecido</a></li>
+                    <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
+                    <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
+                </ul>
+            </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisar...">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
                 <i class="fas fa-search"></i>
             </div>
         </div>
-
     </header>
 
     <main class="tecido-page">
-        <h2>TECIDO</h2>
-        <section class="product-grid">
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
-            <a href="produto.html" class="product-item"></a>
+        <h2>TECIDOS</h2>
+        
+        <div id="loading" style="text-align: center; padding: 20px;">
+            <p>Carregando produtos...</p>
+        </div>
+        
+        <section class="product-grid" id="product-grid">
+            <!-- Os produtos da API aparecerão aqui -->
         </section>
+        
+        <div id="no-products" style="display: none; text-align: center; padding: 40px;">
+            <p>Nenhum produto encontrado.</p>
+        </div>
     </main>
 
     <footer>
@@ -54,6 +56,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/tecidos.js"></script>
 </body>
 </html>

@@ -5,29 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Btex - Login Administração</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
-       <div class="header-top">
-            <a href="../index.html" class="logo-link" >
-            <img src="../publico/icons/imgs/undefined--removebg-preview.png" alt="Btex Logo" class="logo-img"> 
-        </a>       
-        </div>
+    <div class="header-top">
+      <a href="../index.html" class="logo-link">
+        <img src="../publico/icons/imgs/undefined--removebg-preview.png" alt="Btex Logo" class="logo-img"> 
+      </a>       
+    </div>
   </header>
 
   <!-- Formulário de login -->
   <main class="login-page">
-    <form action="/admin/login" method="POST" class="login-form">
-      <label for="email">E-MAIL:</label>
-      <input type="email" id="email" name="email" required>
+    <form id="login-form" class="login-form">
+      <h2>LOGIN ADMINISTRAÇÃO</h2>
+      
+      <label for="usuario">USUÁRIO:</label>
+      <input type="text" id="usuario" name="usuario" required placeholder="Digite seu usuário">
 
       <label for="senha">SENHA:</label>
-      <input type="password" id="senha" name="senha" required>
+      <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
 
-      <a href="index.html"><button type="submit" class="btn-login">Entrar</button>
-      </a>
+      <div id="login-error" class="error-message" style="display: none; color: red; margin: 10px 0; text-align: center;">
+        Usuário ou senha incorretos
+      </div>
+
+      <button type="submit" class="btn-login">
+        <i class="fas fa-sign-in-alt"></i> Entrar
+      </button>
+
+      <!-- Botão para criar primeiro admin -->
+      <div id="criar-primeiro-admin" style="display: none; margin-top: 20px; text-align: center;">
+        <p style="color: #666; margin-bottom: 10px;">Nenhum administrador cadastrado ainda</p>
+        <button type="button" class="btn-criar-admin" onclick="mostrarFormularioCriar()">
+          <i class="fas fa-user-plus"></i> Criar Primeiro Administrador
+        </button>
+      </div>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="../index.html" style="color: #666; text-decoration: none;">
+          ← Voltar para o site
+        </a>
+      </div>
+    </form>
+
+    <!-- Formulário para criar primeiro admin -->
+    <form id="criar-admin-form" class="login-form" style="display: none;">
+      <h2>CRIAR PRIMEIRO ADMINISTRADOR</h2>
+      
+      <label for="novo-usuario">USUÁRIO:</label>
+      <input type="text" id="novo-usuario" name="novo-usuario" required placeholder="Digite o nome de usuário" minlength="3">
+      <small style="color: #666; font-size: 12px;">Mínimo de 3 caracteres</small>
+
+      <label for="nova-senha" style="margin-top: 15px;">SENHA:</label>
+      <input type="password" id="nova-senha" name="nova-senha" required placeholder="Digite a senha" minlength="6">
+      <small style="color: #666; font-size: 12px;">Mínimo de 6 caracteres</small>
+
+      <label for="confirmar-senha" style="margin-top: 15px;">CONFIRMAR SENHA:</label>
+      <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Digite a senha novamente">
+
+      <div id="criar-error" class="error-message" style="display: none; color: red; margin: 10px 0; text-align: center;"></div>
+      
+      <div id="criar-success" class="success-message" style="display: none; color: green; margin: 10px 0; text-align: center;"></div>
+
+      <button type="submit" class="btn-login">
+        <i class="fas fa-user-plus"></i> Criar Administrador
+      </button>
+
+      <button type="button" class="btn-voltar" onclick="voltarParaLogin()">
+        <i class="fas fa-arrow-left"></i> Voltar para Login
+      </button>
     </form>
   </main>
+
+  <script src="js/login.js"></script>
 </body>
 </html>

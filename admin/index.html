@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Btex - Administração</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
@@ -14,54 +15,76 @@
       </a>
       <nav>
         <ul>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html" class="active">Início</a></li>
           <li><a href="alterarbanner.html">Alterar banner</a></li>
           <li><a href="adicionarproduto.html">Adicionar produto</a></li>
         </ul>
       </nav>
+      <div class="admin-info">
+        <span><i class="fas fa-user"></i> <span id="admin-nome">Admin</span></span>
+      </div>
     </div>
   </header>
 
   <main class="admin-page">
-    <h2>Produtos em estoque</h2>
+    <div class="admin-header">
+      <h2>Produtos em estoque</h2>
+      <div class="admin-actions">
+        <input type="text" id="search-products" placeholder="Buscar produto..." class="search-input">
+        <a href="adicionarproduto.html" class="btn-add">
+          <i class="fas fa-plus"></i> Adicionar Produto
+        </a>
+      </div>
+    </div>
 
-    <table class="admin-table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Produto</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>001</td>
-          <td>Produto Exemplo 1</td>
-          <td>
-            <a href="alterarproduto.html"><button class="btn-edit">Alterar Produto</button> </a>
-            <button class="btn-delete">Excluir</button>
-          </td>
-        </tr>
-        <tr>
-          <td>002</td>
-          <td>Produto Exemplo 2</td>
-          <td>
-            <a href="alterarproduto.html"><button class="btn-edit">Alterar Produto</button></a>
-            <button class="btn-delete">Excluir</button>
-          </td>
-        </tr>
-        <tr>
-          <td>003</td>
-          <td>Produto Exemplo 3</td>
-          <td>
-            <a href="alterarproduto.html"><button class="btn-edit">Alterar Produto</button></a>
-            <button class="btn-delete">Excluir</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
+    <!-- Loading -->
+    <div id="loading" style="text-align: center; padding: 40px;">
+      <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+      <p>Carregando produtos...</p>
+    </div>
+
+    <!-- Tabela de produtos -->
+    <div id="table-container" style="display: none;">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Preço</th>
+            <th>Cores</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="products-tbody">
+          <!-- Produtos serão inseridos aqui -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mensagem quando não há produtos -->
+    <div id="no-products" style="display: none; text-align: center; padding: 40px;">
+      <i class="fas fa-box-open" style="font-size: 3rem; color: #ccc;"></i>
+      <p>Nenhum produto cadastrado ainda.</p>
+      <a href="adicionarproduto.html" class="btn-add">
+        <i class="fas fa-plus"></i> Adicionar Primeiro Produto
+      </a>
+    </div>
   </main>
 
+  <footer>
+    <div class="social-media">
+      <a href="https://w.app/btex"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/bilimtecidos/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="exit-btn">
+      <button class="btn-exit" onclick="sair()">
+        <i class="fas fa-sign-out-alt"></i> Sair
+      </button>
+    </div>
+  </footer>
+
+  <script src="js/admin-check.js"></script>
+  <script src="js/listar-produtos.js"></script>
 </body>
 </html>

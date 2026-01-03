@@ -10,30 +10,56 @@
 <body>
     <header>
         <div class="header-top">
-            <a href="index.html" class="logo-link" >
-            <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
-</a>        <nav>
-            <ul>
-                <li><a href="index.html" class="nav-item active">Início</a></li>
-                <li><a href="historia.html" class="nav-item">História</a></li>
-                <li><a href="tecidos.html" class="nav-item">Tecido</a></li>
-                <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
-                <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
-            </ul>
-        </nav>
+            <a href="index.html" class="logo-link">
+                <img src="publico/icons/imgs/undefined--removebg-preview.png" alt="Brex Logo" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-item active">Início</a></li>
+                    <li><a href="historia.html" class="nav-item">História</a></li>
+                    <li><a href="tecidos.html" class="nav-item">Tecido</a></li>
+                    <li><a href="cama,mesa e banho.html" class="nav-item">Cama, mesa e banho</a></li>
+                    <li><a href="https://w.app/Btex" class="nav-item">Whatsapp</a></li>
+                </ul>
+            </nav>
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisar...">
+                <input type="text" id="search-input" placeholder="Pesquisar...">
                 <i class="fas fa-search"></i>
             </div>
         </div>
-
     </header>
 
     <main class="home-page">
+        <!-- Banner Rotativo -->
         <section class="banner-rotativo">
-            <h2>BANNER ROTATIVO</h2>
+            <div id="banner-loading" style="text-align: center; padding: 100px 20px;">
+                <p>Carregando banner...</p>
+            </div>
+            
+            <div id="banner-container" class="banner-slider" style="display: none;">
+                <button class="banner-prev" onclick="mudarSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="banner-slides" id="banner-slides">
+                    <!-- Slides serão inseridos aqui -->
+                </div>
+                
+                <button class="banner-next" onclick="mudarSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="banner-dots" id="banner-dots">
+                    <!-- Indicadores serão inseridos aqui -->
+                </div>
+            </div>
+            
+            <div id="banner-error" style="display: none; text-align: center; padding: 100px 20px;">
+                <p>Banner não disponível no momento.</p>
+            </div>
         </section>
 
+        <!-- Categorias -->
         <section class="categories">
             <a href="tecidos.html" class="category-card" id="tecido-card">
                 <div>
@@ -46,10 +72,21 @@
                 </div>
             </a>
         </section>
+
+        <!-- Produtos em Destaque (Opcional) -->
+        <section class="featured-products">
+            <h2>PRODUTOS EM DESTAQUE</h2>
+            <div id="featured-loading" style="text-align: center; padding: 20px;">
+                <p>Carregando produtos...</p>
+            </div>
+            <div class="product-grid" id="featured-grid">
+                <!-- Produtos serão inseridos aqui -->
+            </div>
+        </section>
     </main>
 
     <footer>
-    <div class="social-media">
+        <div class="social-media">
             <a href="https://w.app/btex"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/bilimtecidos/"><i class="fab fa-instagram"></i></a>
         </div>
@@ -57,9 +94,8 @@
             <span>Localização</span>
             <a href="https://maps.app.goo.gl/H1gjYuRPdRSfRjxt6"><i class="fas fa-map-marker-alt"></i></a>
         </div>
-        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

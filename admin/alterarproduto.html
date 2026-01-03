@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Btex - Alterar Produto</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
   <header>
     <div class="header-top">
       <a href="../index.html" class="logo-link">
@@ -15,7 +15,7 @@
       </a>
       <nav>
         <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
+          <li><a href="index.html" class="nav-item">Início</a></li>
           <li><a href="alterarbanner.html" class="nav-item">Alterar banner</a></li>
           <li><a href="adicionarproduto.html" class="nav-item">Adicionar produto</a></li>
         </ul>
@@ -23,30 +23,97 @@
     </div>
   </header>
 
-
   <main class="alterar-produto-page">
-    <form action="salvar-alteracao.php" method="POST" class="alterar-form">
+    <!-- Loading -->
+    <div id="loading" style="text-align: center; padding: 40px;">
+      <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+      <p>Carregando produto...</p>
+    </div>
+
+    <!-- Erro -->
+    <div id="error-container" style="display: none; text-align: center; padding: 40px;">
+      <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #dc3545;"></i>
+      <p style="color: #dc3545; margin: 20px 0;">Produto não encontrado</p>
+      <a href="index.html" class="btn-cancel">
+        <i class="fas fa-arrow-left"></i> Voltar para lista
+      </a>
+    </div>
+
+    <!-- Formulário -->
+    <div id="form-container" style="display: none;">
+      <h2>Alterar Produto</h2>
       
-      <label for="produto">Produto</label>
-      <input type="text" id="produto" name="produto" required>
+      <form id="alterar-form" class="alterar-form">
+        <input type="hidden" id="produto-id" name="produto-id">
 
-      <label for="preco">Preço:</label>
-      <input type="text" id="preco" name="preco" required>
+        <div class="form-group">
+          <label for="nome">Nome do Produto *</label>
+          <input type="text" id="nome" name="nome" required placeholder="Digite o nome do produto">
+        </div>
 
-      <label for="cores">Cores disponíveis:</label>
-      <input type="text" id="cores" name="cores">
-            
-      <label for="descricao">Alterar Descrição:</label>
-      <input type="text" id="descricao" name="descricao">
-    
+        <div class="form-group">
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione uma categoria</option>
+            <option value="cama, mesa e banho">Cama, Mesa e Banho</option>
+            <option value="tecido">Tecido</option>
+          </select>
+        </div>
 
-      <div class="upload-container">
-        <label for="imagem">Alterar imagens:</label>
-        <input type="file" id="imagem" name="imagem" accept="image/*" multiple>
-      </div>
+        <div class="form-group">
+          <label for="preco">Preço *</label>
+          <input type="number" id="preco" name="preco" step="0.01" required placeholder="Digite o preço">
+        </div>
 
-      <button type="submit" class="btn-save">Salvar</button>
-    </form>
+        <div class="form-group">
+          <label for="cores">Cores disponíveis</label>
+          <input type="text" id="cores" name="cores" placeholder="Ex: azul, vermelho, preto">
+        </div>
+              
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="4" placeholder="Descrição do produto"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="imagem">Imagem (URL)</label>
+          <input type="url" id="imagem" name="imagem" placeholder="Cole o link da imagem">
+          <small>Cole o link de uma imagem da internet</small>
+          
+          <!-- Preview da imagem atual -->
+          <div id="image-preview" style="margin-top: 10px; display: none;">
+            <p style="font-size: 12px; color: #666;">Imagem atual:</p>
+            <img id="current-image" src="" alt="Preview" style="max-width: 200px; border-radius: 5px; border: 1px solid #ddd;">
+          </div>
+        </div>
+
+        <div id="form-message" class="form-message" style="display: none;"></div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-save">
+            <i class="fas fa-save"></i> Salvar Alterações
+          </button>
+          <a href="index.html" class="btn-cancel">
+            <i class="fas fa-times"></i> Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
   </main>
+
+  <footer>
+    <div class="social-media">
+      <a href="https://w.app/btex"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/bilimtecidos/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="exit-btn">
+      <button class="btn-exit" onclick="sair()">
+        <i class="fas fa-sign-out-alt"></i> Sair
+      </button>
+    </div>
+  </footer>
+
+  <script src="js/admin-check.js"></script>
+  <script src="js/alterar-produto.js"></script>
 </body>
 </html>

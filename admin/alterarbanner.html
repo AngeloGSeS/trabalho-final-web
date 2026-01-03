@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Btex - Alterar Banner</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
     <div class="header-top">
-      <a href="index.html" class="logo-link">
+      <a href="../index.html" class="logo-link">
         <img src="../publico/icons/imgs/undefined--removebg-preview.png" alt="Btex Logo" class="logo-img">
       </a>
       <nav>
@@ -25,36 +26,106 @@
 
   <!-- Conteúdo principal -->
   <main class="banner-page">
-    <section class="banner-section">
-      <h2>Banner Atual</h2>
-      <div class="banner-box">
-        <p>BANNER ATUAL</p>
-      </div>
-    </section>
+    <!-- Loading -->
+    <div id="loading" style="text-align: center; padding: 40px;">
+      <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+      <p>Carregando banner...</p>
+    </div>
 
-    <section class="photos-section">
-      <div class="photos-header">
-        <h3>Fotos</h3>
-        <button class="btn-add">Adicionar Foto</button>
-      </div>
-      <div class="photos-list">
-        <div class="photo-item">
-          <span>Imagem 1</span>
-          <button class="btn-delete">Excluir Foto</button>
+    <!-- Conteúdo do banner -->
+    <div id="banner-content" style="display: none;">
+      <section class="banner-section">
+        <h2>Preview do Banner</h2>
+        <div class="banner-preview">
+          <div class="banner-slider-preview">
+            <button class="banner-prev-preview" onclick="mudarSlidePreview(-1)">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div id="banner-preview-container" class="banner-preview-container">
+              <p style="text-align: center; color: #999;">Nenhuma imagem no banner</p>
+            </div>
+            
+            <button class="banner-next-preview" onclick="mudarSlidePreview(1)">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
-        <div class="photo-item">
-          <span>Imagem 2</span>
-          <button class="btn-delete">Excluir Foto</button>
+      </section>
+
+      <section class="photos-section">
+        <div class="photos-header">
+          <h3>Imagens do Banner</h3>
+          <button class="btn-add" onclick="mostrarModalAdicionar()">
+            <i class="fas fa-plus"></i> Adicionar Imagem
+          </button>
         </div>
-      </div>
-    </section>
+        
+        <div id="photos-list" class="photos-list">
+          <!-- Lista de imagens será preenchida aqui -->
+        </div>
+
+        <div id="no-images" style="display: none; text-align: center; padding: 40px; color: #999;">
+          <i class="fas fa-image" style="font-size: 3rem; margin-bottom: 20px;"></i>
+          <p>Nenhuma imagem no banner ainda</p>
+          <button class="btn-add" onclick="mostrarModalAdicionar()">
+            <i class="fas fa-plus"></i> Adicionar Primeira Imagem
+          </button>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <!-- Botão de sair -->
-  <div class="exit-btn">
-    <a href="../admin/index.html" class="btn-exit">Sair</a>
+  <!-- Modal para adicionar imagem -->
+  <div id="modal-adicionar" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Adicionar Imagem ao Banner</h3>
+        <button class="modal-close" onclick="fecharModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <form id="form-adicionar-imagem">
+        <div class="form-group">
+          <label for="nova-imagem-url">URL da Imagem</label>
+          <input type="url" id="nova-imagem-url" required placeholder="Cole o link da imagem (ex: https://exemplo.com/imagem.jpg)">
+          <small>A imagem deve estar hospedada na internet</small>
+        </div>
+
+        <div class="form-group">
+          <label>Preview</label>
+          <div id="preview-nova-imagem" style="min-height: 200px; background: #f5f5f5; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+            <p style="color: #999;">Cole uma URL para ver o preview</p>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-save">
+            <i class="fas fa-plus"></i> Adicionar
+          </button>
+          <button type="button" class="btn-cancel" onclick="fecharModal()">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="https://w.app/btex"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/bilimtecidos/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="exit-btn">
+      <button class="btn-exit" onclick="sair()">
+        <i class="fas fa-sign-out-alt"></i> Sair
+      </button>
+    </div>
+  </footer>
+
+  <script src="js/admin-check.js"></script>
+  <script src="js/alterar-banner.js"></script>
 </body>
 </html>
