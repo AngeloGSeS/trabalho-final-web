@@ -58,16 +58,16 @@
       </div>
 
       <div class="form-group image-upload">
-        <label for="imagem">Imagem do Produto (URL)</label>
-        <input type="url" id="imagem" name="imagem" placeholder="Cole o link da imagem (ex: https://exemplo.com/imagem.jpg)">
-        <small>Cole o link de uma imagem hospedada na internet</small>
-        
-        <!-- Preview da imagem -->
+        <label for="imagem">Imagem do Produto *</label>
+        <input type="file" id="imagem" accept="image/*" required>
+        <small>Envie uma imagem do produto</small>
+
         <div id="image-preview" style="margin-top: 15px; display: none;">
-          <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Preview:</p>
-          <img id="preview-img" src="" alt="Preview" style="max-width: 300px; max-height: 300px; border-radius: 5px; border: 1px solid #ddd;">
+          <p style="font-size: 12px; color: #666;">Preview:</p>
+          <img id="preview-img" style="max-width:300px; border-radius:6px;">
         </div>
       </div>
+
 
       <div id="form-message" class="form-message" style="display: none;"></div>
 
